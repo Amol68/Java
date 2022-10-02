@@ -45,3 +45,40 @@ public class Main
     }
 }
 
+
+////Example of an abstract class that has abstract and non-abstract methods:
+
+abstract class bike
+{
+    bike()
+    {
+        System.out.println("This is bike  constructor");
+    }
+    
+    abstract void run();
+    
+    void change_gear()
+    {
+            System.out.println("Change The Gear");
+    }
+    
+}
+
+class honda extends bike
+{
+    void run()
+    {
+        System.out.println("Honda Is Running");
+    }
+}
+
+public class Main
+{
+    public static void main (String[] args) 
+    {
+        honda h1 = new honda();
+        h1.run();
+        h1.change_gear();
+    }
+    
+
