@@ -1,0 +1,63 @@
+// iostream is all about java.io package. 
+// Mainly used to transfer data between a java program and file.
+
+// usually when program execution is completed and application is closed , the data is lost. To store data permanently .....
+// Also betweem java program and keyboard input and output console.
+
+// File I/O is mainly used to deal with small , insensitive data.
+// for large amount of sensitive data , jdbc api is used.
+
+// stream is a logical connection between a java program and file through which sequence of data flows.
+
+// 2 types of streams based on direction of data flow : inputstream and outputstream
+// 2 types of streams based on type  of data flow : binarystream(inputstream , outputstream) and characterstream(reader and writer)
+
+// different subclasses exist inputstream , outputstream , reader and writer based on source and destination.
+//source: keyboard, mouse, object, string, stringbuffer, db, file, socket, array
+//destinations: console,object, string, stringbuffer, db, file, socket, array (refer ss)
+
+// naming conventions: source+inputstream (e.fileinstream)
+                       destination+outputstream (e.fileoutstream)
+
+// i/p stream and o/p stream classes are abstract classes . They contain several methods . Some are implementable directly while some are not.
+
+// inputstream class is a superclass of different sublclasses based on source of data.
+// this inputstream class is further a subclass of java.lang.object
+
+// 9 types of inputstream sublclasses : refer ss
+
+// 8 types of outputstream sublclasses : refer ss
+  
+// Fileinputstream and Fileoutputstream classes sends 1 byte of data . But converts the data into binary format.
+
+// incase of printstream , data will be stored as it is . It will not convert the data into binary format.
+
+// outputstream is a subclass of special interface i.e. Flushable
+
+// datainputstream,dataoutputstream,objectinputstream,objectoutputstream cannot form connection directly. They require background connection i.e.
+   Fileinputstream and Fileoutputstream 
+
+// when we write data into a stream , the data is not stored in file directly. It is stored in outputstream memory.To save data from outputstream memory into a file 
+   flush method is used available in Flushable interface.
+
+//Except for markSupported(), and mark() method all other methods throws IOException.
+
+//  outputstream class has only 5 methods . No marking mechanism here (refer ss)
+
+// https://www.knowprogram.com/java/outputstream/ 
+
+
+//Writing data into a file and reading has 6 & 5 steps (refer ss).
+
+// Steps for OutputStream Class:
+  in fileOutputStream class , there cannot be any empty parameter constructor. There must be a parameter. Therefore we give source and dest file as constructor.
+  Since we create object in java appl itselt , we only give dest file as paarmeter.
+
+//In java 1.0 v, Fileoutputstream had a problem. data is written to a file using Fileoutputstream . If we try to write data second time , data available is lost.
+  It did not support append operation, but only overwrite.
+ 
+// So in java 1.1 v,Fileoutputstream(String name , boolean append) constructor was introduced. To append data , pass TRUE else False.
+
+// Working with File Output Stream Classes & Its Constructors (Session 11 and refer ss).
+
+ 
