@@ -50,8 +50,8 @@
 //Writing data into a file and reading has 6 & 5 steps (refer ss).
 
 // Steps for OutputStream Class:
-  in fileOutputStream class , there cannot be any empty parameter constructor. There must be a parameter. Therefore we give source and dest file as constructor.
-  Since we create object in java appl itselt , we only give dest file as paarmeter.
+  in fileOutputStream class , there cannot be any empty parameter constructor. There must be a parameter. Therefore we give source and dest file as parameter.
+  Since we create object in java appl itselt , we only give dest file as parameter.
 
 //In java 1.0 v, Fileoutputstream had a problem. data is written to a file using Fileoutputstream . If we try to write data second time , data available is lost.
   It did not support append operation, but only overwrite.
@@ -60,4 +60,7 @@
 
 // Working with File Output Stream Classes & Its Constructors (Session 11 and refer ss).
 
+//Fileinputstream and Fileoutputstream can carry only 1 byte of data. 
+
+// Fileinputstream doesnt have append constructors! they only have 3 constructors.
  
