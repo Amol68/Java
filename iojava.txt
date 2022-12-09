@@ -34,6 +34,8 @@
 
 // outputstream is a subclass of special interface i.e. Flushable
 
+// Fileinputstream read() method returns only first byte available. If byte is not available it returns -1.
+
 // datainputstream,dataoutputstream,objectinputstream,objectoutputstream cannot form connection directly. They require background connection i.e.
    Fileinputstream and Fileoutputstream 
 
