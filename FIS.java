@@ -16,3 +16,29 @@ public class FIS {
 		
 	}
 }
+
+*********??*********??*********??*********??*********??*********??*********??*********??*********??*********??*********??
+	
+Program to read file dynamically.
+	
+package java_io;
+import java.io.*;
+
+public class FIS {
+
+	public static void main(String[] args) throws IOException , FileNotFoundException
+	{
+		FileInputStream fis = new FileInputStream("demotxt.txt");
+		int data;
+		
+		while((data=fis.read())!=-1)
+		{
+			System.out.print((char)data);
+		}
+		
+		
+		
+		fis.close();
+		
+	}
+}
