@@ -1,3 +1,5 @@
+//
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -14,15 +16,15 @@ public class serialization {
 		
 		File f = new File("object.txt");
 		FileOutputStream fos = new FileOutputStream(f);
-	    ObjectOutputStream oos = new ObjectOutputStream(fos);
-	    oos.writeObject(d1);
+	        ObjectOutputStream oos = new ObjectOutputStream(fos);
+	        oos.writeObject(d1);
 	    
-	    FileInputStream fis = new FileInputStream(f);
-	    ObjectInputStream ois = new ObjectInputStream(fis);
+	       FileInputStream fis = new FileInputStream(f);
+	       ObjectInputStream ois = new ObjectInputStream(fis);
 	    
-	 demo obj = (demo) ois.readObject() ;
+	       demo obj = (demo) ois.readObject() ;
 	
-	System.out.println(obj.i);
+	        System.out.println(obj.i);
 	}
 
 }
