@@ -21,14 +21,15 @@ to a wrapper class object, and Java will automatically perform the boxing conver
 
 Example
 Here is an example of using the Integer wrapper class:
-int num = 7;Integer num1 = new Integer(8); // Boxingint num2 = num1.intValue(); // Unboxingint num3 = num1; // Auto Unboxing
+int num = 7;
+Integer num1 = new Integer(8); // Boxing
+int num2 = num1.intValue(); // Unboxingint 
+num3 = num1; // Auto Unboxing
 In the above example, the variable num is a primitive int type. num1 is an Integer object created using the boxing method.
 num2 is assigned the unboxed value from num1 using the intValue() method. num3 is directly assigned the value of num1 using auto unboxing.
 
 Similarly, you can use other wrapper classes like Double and Character for boxing and unboxing operations.
-In this example, we want to convert a string into an integer. To do this, we can use the Integer class, which 
-has a method called parseInt. This method takes a string as input and converts it into an integer. We can then
-store this integer in a variable called num3 and perform calculations on it, such as multiplying it by 2.
+
 
 
 These wrapper classes, such as Integer, are called "wrapper" classes because they wrap around primitive types and provide additional features.
@@ -40,15 +41,14 @@ Additionally, if you directly assign a primitive value to an object type, it is 
 class HelloWorld {
     public static void main(String[] args) {
        
-       Integer num = new Integer(1);
-      System.out.println("Value:" +num);
+      Integer num = new Integer(1);  // boxing
+     System.out.println("Value:" +num);
       
-      // OR
-     
+      
      Integer num1 = 11;
-    System.out.println("Value:" +num1); // this is known as auto-boxing , we are storing primitive type into object type
+     System.out.println("Value:" +num1); // this is known as auto-boxing , we are storing primitive type into object type
      
-      int num2 = num1; 
+     int num2 = num1; 
      System.out.println("Value:" +num2); // this is known as       auto un-boxing , we are storing object type into primitive type
     } 
 }
