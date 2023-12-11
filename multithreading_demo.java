@@ -6,45 +6,42 @@
 //Parallelism is related to an application where  tasks are divided into smaller sub-tasks that are
 //processed seemingly simultaneously or parallel.
 
- class thread1 extends Thread {
+ 
+class myThread1 extends Thread{
 	
-	public void run()
-	{
-		while(true)
-		{
-		System.out.println("Thread 1 is running");
+	@Override
+	public void run() {
+		int i=0;
+		
+		while(i<10) {
+			System.out.println("Cooking");
+			i++;
 		}
 		
 	}
-	
 }
- 
- class thread2 extends Thread {
-		
-	public void run()
-	{
-		while(true)
-		{
-		System.out.println("Thread 2 is running");
+
+class myThread2 extends Thread{
+	
+	@Override
+	public void run() {
+		int i=0;
+		while(i<10) {
+			System.out.println("Texting");
+			i++;
 		}
 		
 	}
-	
 }
- 
 
+public class ThreadDemo {
 
-
-
-public class multi_threading {
-
-	public static void main(String[] args) 
-	{
-       thread1 t1 = new thread1();
-       thread2 t2 = new thread2();
-       t1.start();
-       t2.start();
-       
+	public static void main(String[] args) {
+		
+      myThread1 t1 = new myThread1();
+      myThread2 t2 = new myThread2();
+      t1.start();
+      t2.start();
 	}
 
 }
